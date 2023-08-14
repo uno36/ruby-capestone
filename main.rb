@@ -9,7 +9,7 @@ class Main
   def app_intro
     puts 'Welcome to the our App!'
     loop do
-      @app.display_options  
+      @app.display_options
       option = take_input
       @app.run(option)
 

@@ -1,19 +1,23 @@
 menu_options = [
-  "List all books",
-  "List all music albums",  
-  "List all games",
-  "List all genres",
-  "List all labels",
-  "List all authors",
-  "List all sources",
-  "Add a book",
-  "Add a music album",  
-  "Add a game",
-  "Quit"
+  'List all books',
+  'List all music albums',
+  'List all games',
+  'List all genres',
+  'List all labels',
+  'List all authors',
+  'List all sources',
+  'Add a book',
+  'Add a music album',
+  'Add a game',
+  'Quit'
 ]
 
+def quit_app
+  puts 'Quitting the app. Goodbye!'
+end
+
 loop do
-  puts "Select an option:"
+  puts 'Select an option:'
   menu_options.each_with_index { |option, index| puts "#{index + 1}. #{option}" }
 
   choice = gets.chomp.to_i
@@ -23,30 +27,25 @@ loop do
   when 2
     List all music albums
   when 3
-    List all movies
-  when 4
     List all games
-  when 5
+  when 4
     List all genres
-  when 6
+  when 5
     List all labels
-  when 7
+  when 6
     List all authors
-  when 8
+  when 7
     List all sources
-  when 9
+  when 8
     Add a book
-  when 10
+  when 9
     Add a music album
-  when 11
-    Add a movie
-  when 12
+  when 10
     Add a game
-  when 13
-    puts "Quitting the app. Goodbye!"
-    save_data
+  when 11
+    quit_app
     break
   else
-    puts "Invalid choice. Please select a valid option."
+    puts 'Invalid choice. Please select a valid option.'
   end
 end
