@@ -4,7 +4,6 @@ require_relative 'classes/Music/display'
 require_relative 'classes/gameClass/game'
 require_relative 'classes/authorClass/author'
 
-
 class App
   attr_reader :genres, :music_albums
 
