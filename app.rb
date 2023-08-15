@@ -1,4 +1,5 @@
 require_relative 'classes/gameClass/game'
+require_relative 'classes/authorClass/author'
 
 menu_options = [
   'List all books',
@@ -31,6 +32,11 @@ def add_game
 end
 
 # ------------------------Game-Section-end-----------------------------------------------
+
+# ------------------------Author-Section-Start---------------------------------------------
+
+
+# ------------------------Author-Section-Start---------------------------------------------
 
 def quit_app
   puts 'Quitting the app. Goodbye!'
