@@ -28,7 +28,7 @@ def add_game
   author = gets.chomp
   puts 'Last played date: '
   lastplayeddate = gets.chomp
-  game = Game.new(title, genre, source, author, lastplayeddate)
+  Game.new(title, genre, source, author, lastplayeddate)
 end
 
 # ------------------------Game-Section-end-----------------------------------------------
