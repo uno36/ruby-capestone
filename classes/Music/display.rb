@@ -16,7 +16,7 @@ class Display
     else
       puts "Music Albums list, count(#{music_albums.count}) :\n\n"
       music_albums.each_with_index do |music, index|
-        puts "#{index + 1}), Genre: #{music.name}" # Use music.genre.name instead of genre.name
+        puts "#{index + 1}), Genre: #{music.genre.name}"
       end
     end
   end

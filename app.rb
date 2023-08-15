@@ -59,7 +59,7 @@ class App
     genre.add_item(album)
     @music_albums << album
     @genres << genre
-    puts "\n 'item was added successfully!"
+    puts "\n 'album was added successfully!"
   end
 
   def quit_app
