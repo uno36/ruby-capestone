@@ -13,23 +13,22 @@ class App
     @music_albums = []
   end
 
-
-# ------------------------Game-Section-Start---------------------------------------------
-def add_game
-  puts "\nInput Game Information"
-  puts 'Title of the game: '
-  title = gets.chomp # title of the game
-  puts 'Genre of this game: '
-  genre = gets.chomp.split(',')
-  puts 'source of the game'
-  source = gets.chomp
-  puts 'Author of the game'
-  author = gets.chomp
-  puts 'Last played date: '
-  lastplayeddate = gets.chomp
-  Game.new(title, genre, source, author, lastplayeddate)
-end
-# ------------------------Game-Section-end-----------------------------------------------
+  # ------------------------Game-Section-Start---------------------------------------------
+  def add_game
+    puts "\nInput Game Information"
+    puts 'Title of the game: '
+    title = gets.chomp # title of the game
+    puts 'Genre of this game: '
+    genre = gets.chomp.split(',')
+    puts 'source of the game'
+    source = gets.chomp
+    puts 'Author of the game'
+    author = gets.chomp
+    puts 'Last played date: '
+    lastplayeddate = gets.chomp
+    Game.new(title, genre, source, author, lastplayeddate)
+  end
+  # ------------------------Game-Section-end-----------------------------------------------
 
   def add_genre(item_type)
     print "#{item_type} genre: "
