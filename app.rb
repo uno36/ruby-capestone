@@ -20,7 +20,7 @@ def add_game
   puts "\nInput Game Information"
   puts 'Title of the game: '
   title = gets.chomp # title of the game
-  puts 'Genre(s) of this game (separated by commas): '
+  puts 'Genre of this game: '
   genre = gets.chomp.split(',')
   puts 'source of the game'
   source = gets.chomp
@@ -28,15 +28,11 @@ def add_game
   author = gets.chomp
   puts 'Last played date: '
   lastplayeddate = gets.chomp
-  Game.new(title, genre, source, author, lastplayeddate)
+  game = Game.new(title, genre, source, author, lastplayeddate)
 end
 
 # ------------------------Game-Section-end-----------------------------------------------
 
-# ------------------------Author-Section-Start---------------------------------------------
-
-
-# ------------------------Author-Section-Start---------------------------------------------
 
 def quit_app
   puts 'Quitting the app. Goodbye!'
@@ -59,7 +55,7 @@ loop do
   when 5
     List all labels
   when 6
-    List all authors
+    add_author
   when 7
     List all sources
   when 8
