@@ -15,11 +15,11 @@ class Item
     years_since_publish > 10
   end
 
-
   def false
     can_be_archived? true
     @archived = true
-    
+  end
+
   def move_to_archived
     if can_be_archived
       @archived = true
@@ -27,6 +27,5 @@ class Item
     else
       puts 'Item cannot be archived'
     end
-
   end
 end

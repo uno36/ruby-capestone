@@ -30,11 +30,7 @@ def add_game
   Game.new(title, genre, source, author, lastplayeddate)
 end
 
-
-
-
 # ------------------------Game-Section-end-----------------------------------------------
-
 
 def quit_app
   puts 'Quitting the app. Goodbye!'
