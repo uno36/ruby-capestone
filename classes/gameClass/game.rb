@@ -3,7 +3,8 @@ require_relative '../item'
 
 class Game < Item
   attr_accessor :last_played_at, :multiplayer
-  def initialize (id, genre, author, source, label, publish_date, last_played_at, archived: false, multiplayer: false)
+
+  def initialize(id, genre, author, source, label, publish_date, last_played_at, archived: false, multiplayer: false)
     super(id, genre, author, source, label, publish_date, archived: archived)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
@@ -13,10 +14,6 @@ class Game < Item
     last_played_date = Date.parse(last_played_at)
     current_date = Date.today
     difference = last_played_date - current_date
-    if super && difference > 2
-      true
-    else
-      false
-    end 
+    super && difference > 2
   end
 end

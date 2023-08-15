@@ -1,4 +1,4 @@
-require_relative './classes/gameClass/game'
+require_relative 'classes/gameClass/game'
 
 menu_options = [
   'List all books',
@@ -17,24 +17,20 @@ menu_options = [
 
 def add_game
   puts "\nInput Game Information"
-  puts "Title of the game: "
-  title = gets.chomp() #title of the game
-  puts "Genre(s) of this game (separated by commas): "
-  genre = gets.chomp().split(',')
-  puts "source of the game"
+  puts 'Title of the game: '
+  title = gets.chomp # title of the game
+  puts 'Genre(s) of this game (separated by commas): '
+  genre = gets.chomp.split(',')
+  puts 'source of the game'
   source = gets.chomp
-  puts "Author of the game"
+  puts 'Author of the game'
   author = gets.chomp
-  puts "Last played date: "
+  puts 'Last played date: '
   lastplayeddate = gets.chomp
-  new_game=Game.new(title,genre, source, author, lastplayeddate)
+  Game.new(title, genre, source, author, lastplayeddate)
 end
 
-
-
-
 # ------------------------Game-Section-end-----------------------------------------------
-
 
 def quit_app
   puts 'Quitting the app. Goodbye!'
