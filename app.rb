@@ -33,7 +33,6 @@ end
 
 # ------------------------Game-Section-end-----------------------------------------------
 
-
 def quit_app
   puts 'Quitting the app. Goodbye!'
 end
