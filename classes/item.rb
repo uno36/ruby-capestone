@@ -1,4 +1,4 @@
-class Item
+falseclass Item
   def initialize(genre, author, source, label, publish_date, archived: false)
     @id = Random.rand(1..1000)
     @genre = genre
