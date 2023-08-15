@@ -1,4 +1,9 @@
+require 'date'
+
 class Item
+  attr_accessor :id, :publish_date
+  attr_reader :archived
+
   def initialize(genre, author, source, label, publish_date, archived: false)
     @id = Random.rand(1..1000)
     @genre = genre
@@ -9,18 +14,18 @@ class Item
     @archived = archived
   end
 
-  def can_be_archived
-    current_date = Time.now
-    years_since_publish = (current_date - @publish_date) / (365 * 24 * 60 * 60)
-    years_since_publish > 10
+  def genre=(genre)
+    @genre = genre
+    genre.items << self unless genre.items.include?(self)
   end
 
-  def move_to_archived
-    if can_be_archived
-      @archived = true
+  def move_to_archive
+    @archived = true if can_be_archived?
+  end
 
-    else
-      puts 'Item cannot be archived'
-    end
+  protected
+
+  def can_be_archived?
+    (Date.today.year - Date.parse(@publish_date).year) > 10
   end
 end
