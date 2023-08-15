@@ -1,3 +1,5 @@
+require_relative 'classes/gameClass/game'
+
 menu_options = [
   'List all books',
   'List all music albums',
@@ -11,6 +13,24 @@ menu_options = [
   'Add a game',
   'Quit'
 ]
+# ------------------------Game-Section-Start---------------------------------------------
+
+def add_game
+  puts "\nInput Game Information"
+  puts 'Title of the game: '
+  title = gets.chomp # title of the game
+  puts 'Genre(s) of this game (separated by commas): '
+  genre = gets.chomp.split(',')
+  puts 'source of the game'
+  source = gets.chomp
+  puts 'Author of the game'
+  author = gets.chomp
+  puts 'Last played date: '
+  lastplayeddate = gets.chomp
+  Game.new(title, genre, source, author, lastplayeddate)
+end
+
+# ------------------------Game-Section-end-----------------------------------------------
 
 def quit_app
   puts 'Quitting the app. Goodbye!'
@@ -41,7 +61,7 @@ loop do
   when 9
     Add a music album
   when 10
-    Add a game
+    add_game
   when 11
     quit_app
     break
