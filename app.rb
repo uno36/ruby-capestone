@@ -1,4 +1,5 @@
 require_relative 'classes/gameClass/game'
+require_relative 'classes/authorClass/author'
 
 menu_options = [
   'List all books',
@@ -19,7 +20,7 @@ def add_game
   puts "\nInput Game Information"
   puts 'Title of the game: '
   title = gets.chomp # title of the game
-  puts 'Genre(s) of this game (separated by commas): '
+  puts 'Genre of this game: '
   genre = gets.chomp.split(',')
   puts 'source of the game'
   source = gets.chomp
@@ -53,7 +54,7 @@ loop do
   when 5
     List all labels
   when 6
-    List all authors
+    add_author
   when 7
     List all sources
   when 8
