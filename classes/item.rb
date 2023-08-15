@@ -11,12 +11,16 @@ class Item
 
   def can_be_archived
     current_date = Time.now
-    length_year = current_date - publish_date
-    length_year > 10
+    years_since_publish = (current_date - @publish_date) / (365 * 24 * 60 * 60)
+    years_since_publish > 10
   end
 
   def move_to_archived
-    can_be_archived? true
-    @archived = true
+    if can_be_archived
+      @archived = true
+
+    else
+      puts 'Item cannot be archived'
+    end
   end
 end
