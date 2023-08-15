@@ -1,4 +1,4 @@
-falseclass Item
+class Item
   def initialize(genre, author, source, label, publish_date, archived: false)
     @id = Random.rand(1..1000)
     @genre = genre
@@ -15,7 +15,7 @@ falseclass Item
     length_year > 10
   end
 
-  def move_to_archived
+  def false
     can_be_archived? true
     @archived = true
   end
