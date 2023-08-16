@@ -20,8 +20,7 @@ module LibraryModule
     data = load_data
     puts 'Below is a list of all added books'
     data.each_with_index do |item_data, index|
-      puts "Book #{index + 1}: Genre: #{item_data['genre']}, Title: #{item_data['label']}" \
-           "Author: #{item_data['author']}, Date Published: #{item_data['publish_date']}"
+      puts "Book #{index + 1}: Genre: #{item_data['genre']}, Title: #{item_data['label']}, Author: #{item_data['author']}, Date Published: #{item_data['publish_date']}"
     end
   end
 
