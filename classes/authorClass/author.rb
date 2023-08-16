@@ -8,8 +8,12 @@ class Author
     @items = []
   end
 
-  def add_items(item)
+  def add_author(item)
     @items << item
     item.author = self
+  end
+
+  def to_hash
+    { id: @id, first_name: @first_name, last_name: @last_name }
   end
 end
