@@ -1,4 +1,4 @@
-require 'JSON'
+require 'JSON' # rubocop:disable Layout/EndOfLine
 require_relative '../classes/bookClass/book'
 
 module LibraryModule
