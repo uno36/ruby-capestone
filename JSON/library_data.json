@@ -1,0 +1,123 @@
+[
+  {
+    "genre": "Fiction",
+    "author": "Jane Austen",
+    "source": "Hardcover",
+    "label": "Pride and Prejudice",
+    "publish_date": "1813-01-28",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Mystery",
+    "author": "Agatha Christie",
+    "source": "eBook",
+    "label": "Murder on the orient Express",
+    "publish_date": "1934-10-01",
+    "cover_state": "bad",
+    "archived": false
+  },
+  {
+    "genre": "Fantasy",
+    "author": "J.R.R Tolkeien",
+    "source": "Audiobook",
+    "label": "The Hobbit",
+    "publish_date": "1937-09-21",
+    "cover_state": "Good",
+    "archived": false
+  },
+  {
+    "genre": "Horror",
+    "author": "Stephen King",
+    "source": "Hardcover",
+    "label": "The Shining",
+    "publish_date": "1977-01-28",
+    "cover_state": "bad",
+    "archived": false
+  },
+  {
+    "genre": "Romance",
+    "author": "Nicholas Sparks",
+    "source": "Paperback",
+    "label": "The Notebook",
+    "publish_date": "1996-10-01",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Thriller",
+    "author": "Dan Brown",
+    "source": "Hardcove",
+    "label": "The Da Vinci Code",
+    "publish_date": "2003-03-18",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Historical Fiction",
+    "author": "Ken Follett",
+    "source": "eBook",
+    "label": "The Pillars of the Earth",
+    "publish_date": "1989-10-07",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Young Adult",
+    "author": "J.K. Rowling",
+    "source": "Hardcover",
+    "label": "Harry Potter and the Sourcerer's Stone",
+    "publish_date": "1997-06-26",
+    "cover_state": "",
+    "archived": false
+  },
+  {
+    "genre": "Biography",
+    "author": "Michelle Obama",
+    "source": "Paperback",
+    "label": "Becoming",
+    "publish_date": "2018-11-13",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Mystrey",
+    "author": "Agatha Christie",
+    "source": "Hardcover",
+    "label": "And Then There Were None",
+    "publish_date": "1939-11-06",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Fantasy",
+    "author": "J.R.R Tolkein",
+    "source": "Paperback",
+    "label": "The Lord of the Rings: The fellowship of the ring",
+    "publish_date": "1954-07-29",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "Historical Fiction",
+    "author": "Ken Follett",
+    "source": "Hardcover",
+    "label": "Pillars of the of te Earth",
+    "publish_date": "1989-10-07",
+    "cover_state": "good",
+    "archived": false
+  },
+  {
+    "genre": "test",
+    "author": {
+      "id": 711,
+      "first_name": "J.J ",
+      "last_name": "Rowling"
+    },
+    "source": "yy",
+    "label": "tt",
+    "publish_date": "r",
+    "cover_state": "r",
+    "archived": false
+  }
+]
