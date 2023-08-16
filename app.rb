@@ -32,5 +32,16 @@ class App
 
   def add_a_game
     add_game
+    display_options
+  end
+
+  def list_of_games
+    game_list_display
+    display_options
+  end
+
+  def list_all_authors
+    author_list_display
+    display_options
   end
 end
