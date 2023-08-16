@@ -23,9 +23,11 @@ class Item
     @archived = true if can_be_archived?
   end
 
-  protected
+  # private methos
+  private
 
   def can_be_archived?
-    (Date.today.year - Date.parse(@publish_date).year) > 10
+    current = Time.now.year - publish_date.year.to_i
+    true if current > 10
   end
 end
