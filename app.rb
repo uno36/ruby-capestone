@@ -1,8 +1,6 @@
 require_relative 'module/music_module'
 require_relative 'module/game_module'
 
-
-
 class App
   include MusicModule
   include ReadMusic
