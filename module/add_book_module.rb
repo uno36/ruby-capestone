@@ -12,10 +12,10 @@ module AddBookModule
     puts 'Enter the author:'
     author_list_display
     author.gets.chomp
-    puts 'Select [0] to cleate new Author'    
+    puts 'Select [0] to cleate new Author'
     input = gets.chomp.to_i
     author = author_choice(input)
-    
+
     puts 'Enter the source:'
     source = gets.chomp
 
@@ -30,5 +30,4 @@ module AddBookModule
 
     LibraryModule.add_book(genre, author, source, label, publish_date, cover_state)
   end
-
 end
