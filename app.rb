@@ -35,5 +35,4 @@ class App
   def add_a_game
     add_game
   end
-  
 end

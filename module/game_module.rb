@@ -2,7 +2,6 @@ require 'JSON'
 require_relative '../classes/gameClass/game'
 
 module GameModule
-
   def add_game
     puts "\nInput Game Information"
     puts 'Game genre: '
@@ -21,25 +20,18 @@ module GameModule
     fetch_game_data
     new_game_data = fetch_game_data << game.to_hash
     save_game_data(new_game_data)
-    puts "Game created......"
-    end
+    puts 'Game created......'
   end
 
   def fetch_game_data
     existing_game = []
-    if File.exist?('JSON/game.json')
-      existing_game = JSON.parse(File.read('JSON/game.json'))
-    end
-    return existing_game
+    existing_game = JSON.parse(File.read('JSON/game.json')) if File.exist?('JSON/game.json')
+    existing_game
   end
 
   def save_game_data(data)
-    File.open('JSON/game.json', 'w') do |file| JSON.dump(data, file)
-  end
-
-  def list_all_games
-
+    File.open('JSON/game.json', 'w') do |file|
+      JSON.dump(data, file)
+    end
   end
 end
-
-

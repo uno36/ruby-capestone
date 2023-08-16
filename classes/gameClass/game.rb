@@ -17,7 +17,6 @@ class Game < Item
     super && difference > 2
   end
 
-  
   def to_hash
     {
       archived: @archived,
