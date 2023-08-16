@@ -1,22 +1,16 @@
 require_relative '../item'
 
 class MusicAlbum < Item
-  attr_reader :name, :genre, :archived
+  attr_accessor :on_spotify, :genre
 
-  def initialize(name, on_spotify: false, **dummy_args)
-    super(*dummy_args.values_at(:genre, :author, :source, :label, :publish_date), archived: dummy_args[:archived])
-    @id = Random.rand(1..1000)
-    @name = name
+  def initialize(on_spotify, publish_date)
+    super(nil, nil, nil, nil, publish_date)
     @on_spotify = on_spotify
   end
 
-  def can_be_archived
-    parent_result = super
-    parent_result && @no_spotify
-  end
+  private
 
-  def move_to_archived
-    super
-    @archived = true
+  def can_be_archived?
+    super and !@no_spotify
   end
 end
