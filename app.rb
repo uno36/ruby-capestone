@@ -1,5 +1,7 @@
 require_relative 'module/music_module'
 require_relative 'module/game_module'
+require_relative 'module/book_module'
+require_relative 'module/add_book_module'
 
 class App
   include MusicModule
@@ -8,6 +10,8 @@ class App
   include ReadGenre
   include WriteGenre
   include GameModule
+  include LibraryModule
+  include AddBookModule
 
   def initialize
     @genre = read_genre
@@ -43,5 +47,14 @@ class App
   def list_all_authors
     author_list_display
     display_options
+  end
+
+  def add_book
+    add_a_book
+    author_list_display
+  end
+
+  def list_all_books
+    LibraryModule.list_all_books
   end
 end

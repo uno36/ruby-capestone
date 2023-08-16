@@ -1,5 +1,7 @@
 require_relative 'app'
 
+puts 'Welcome to Our App, please select an option to begin'
+
 def display_options
   options = { 1 => 'List books', 2 => 'List music albums', 3 => 'List games',
               4 => 'List genres', 5 => 'List labels', 6 => 'List authors',
@@ -33,6 +35,7 @@ def choose_option_two(choice)
   add_a_music_album if choice == 8
   add_a_game if choice == 9
   exit if choice == 10
+  display_options
 end
 
 def main
