@@ -106,5 +106,16 @@
     "publish_date": "1989-10-07",
     "cover_state": "good",
     "archived": false
+  },
+  {
+    "publisher": "Abdul Hamid",
+    "label": {
+      "id": 765,
+      "title": "Jhon Smith",
+      "color": "Red"
+    },
+    "publish_date": "02-03-2022",
+    "cover_state": "bad",
+    "archived": false
   }
 ]

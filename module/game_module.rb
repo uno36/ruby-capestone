@@ -13,7 +13,7 @@ module GameModule
     print "Enter '0' to cleate new author: "
     input = gets.chomp.to_i
     author = author_choice(input)
-    print 'Last played date  [dd-mm-yyyy]: '
+    print 'Last played date [dd-mm-yyyy]: '
     last_played_at = gets.chomp
     game = Game.new(author, last_played_at, multiplayer)
     fetch_game_data

@@ -23,21 +23,25 @@ module LabelModule
   def label_list_display
     puts "\nHere is the list of labels"
     list = fetch_label_data
-    list.each_with_index do |item, index|
+    if list.empty?
+       puts "No record found"
+    else
+     list.each_with_index do |item, index|
       puts "#{index + 1}) id: #{item['id']}, Title: #{item['title']}, Color: #{item['color']}"
+     end
     end
   end
 
   def create_label
-    puts 'Label name: '
+    print 'Label name: '
     title = gets.chomp
-    puts 'Label color: '
+    print 'Label color: '
     color = gets.chomp
     label = Label.new(title, color).to_hash
     existing_label = fetch_label_data
     existing_label << label
     save_label_data(existing_label)
-    puts 'Label has been created successfully!'
+    puts 'Label has been created and saved successfully!'
   end
 
   def label_choice(selection)

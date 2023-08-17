@@ -1,4 +1,4 @@
-require 'JSON' # rubocop:disable Layout/EndOfLine
+require 'JSON' 
 require_relative '../classes/bookClass/book'
 
 module LibraryModule
@@ -20,17 +20,15 @@ module LibraryModule
     data = load_data
     puts 'Below is a list of all added books'
     data.each_with_index do |item_data, index|
-      # rubocop:disable Layout/LineLength
-      puts "#{index + 1}) Genre: #{item_data['genre']}, Title: #{item_data['label']}, Author: #{item_data['author']}, Date: #{item_data['publish_date']}"
-      # rubocop:enable Layout/LineLength
+      puts "#{index + 1}) Title: #{item_data['label']['title']}, publisher: #{item_data['publisher']}, Publish Date: #{item_data['publish_date']}, Cover State: #{item_data['cover_state']}"
     end
   end
 
-  def self.add_book(genre, author, source, label, publish_date, cover_state)
+  def self.add_book(label, publisher, publish_date, cover_state, archived: false)
     data = load_data
-    book = Book.new(genre, author, source, label, publish_date, cover_state)
+    book = Book.new(label, publisher, publish_date, cover_state, archived: false)
     data << book.to_h
     save_data(data)
-    puts "Book '#{label}' added successfully!"
+    puts "Book added and saved successfully!"
   end
 end
