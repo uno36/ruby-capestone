@@ -26,10 +26,10 @@ module MusicModule
   end
 
   def add_a_music
-    puts 'Enter the publish date (DD-MM-YYYY):'
+    print 'Enter the publish date (DD-MM-YYYY): '
     publish_date = gets.chomp
 
-    puts 'Is it on Spotify? (Y/N):'
+    print 'Is it on Spotify? (Y/N): '
     on_spotify = gets.chomp.capitalize
 
     @new_album = MusicAlbum.new(publish_date, on_spotify)
@@ -45,7 +45,7 @@ module MusicModule
     else
       puts 'Select a genre from the list:'
       show_genres
-      puts 'Add a new genre [0]'
+      print 'Add a new genre [0]: '
       user_select = gets.chomp.to_i
       if user_select.zero?
         add_genre
@@ -64,7 +64,7 @@ module MusicModule
   end
 
   def add_genre
-    puts 'Enter the new genre name:'
+    print 'Enter the new genre name: '
     @name = gets.chomp.capitalize
     new_genre = Genre.new(@name)
     @container << { id: Random.rand(1..100), name: new_genre.name }
