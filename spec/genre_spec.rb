@@ -1,6 +1,5 @@
 require_relative '../classes/Music/genre'
 
-
 describe 'Testing Music Album functions' do
   before(:each) do
     @new_genre = Genre.new('Tadesse & Omachi & Erik')
