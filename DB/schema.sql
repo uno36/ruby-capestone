@@ -25,4 +25,19 @@ CREATE TABLE Author (
     last_name VARCHAR(50)
 );
 
+CREATE TABLE Book(
+  id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+  publish_date DATE,
+  archived BOOLEAN,
+  publisher VARCHAR(150),
+  cover_state VARCHAR(200),
+);
+
+CREATE TABLE Labels(
+  id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+  title VARCHAR(150),
+  color VARCHAR(100),
+  FOREIGN KEY(item_id) REFERENCES items(id)
+);
+
 
