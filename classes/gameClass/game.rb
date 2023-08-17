@@ -22,7 +22,7 @@ class Game < Item
       author: @author,
       id: @id,
       last_played_at: @last_played_at,
-      multiplayer: @multiplayer,
+      multiplayer: @multiplayer
     }
   end
 end

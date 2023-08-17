@@ -8,7 +8,6 @@ module AddBookModule
   include GameModule
   include LabelModule
   def add_a_book
-
     print 'Enter the publisher: '
     publisher = gets.chomp
 

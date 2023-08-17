@@ -1,4 +1,4 @@
-require 'JSON' 
+require 'JSON'
 require_relative '../classes/bookClass/book'
 
 module LibraryModule
@@ -29,6 +29,6 @@ module LibraryModule
     book = Book.new(label, publisher, publish_date, cover_state, archived: false)
     data << book.to_h
     save_data(data)
-    puts "Book added and saved successfully!"
+    puts 'Book added and saved successfully!'
   end
 end

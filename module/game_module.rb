@@ -50,8 +50,8 @@ module GameModule
       puts 'No Games found.'
     else
       list.each_with_index do |item, index|
-      puts "#{index + 1}) id: #{item['id']}, Author Name: #{item['author']['first_name']} #{item['author']['last_name']}, " \
-           "multiplayer: #{item['multiplayer']}, Last playing date: #{item['last_played_at']}"
+        puts "#{index + 1}) id: #{item['id']}, Author Name: #{item['author']['first_name']} #{item['author']['last_name']}, " \
+             "multiplayer: #{item['multiplayer']}, Last playing date: #{item['last_played_at']}"
       end
     end
   end

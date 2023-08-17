@@ -5,6 +5,7 @@ module LabelModule
   def add_label
     puts "\nHere is the list of labels"
     return if File.exist?('JSON/label.json')
+
     create_label
   end
 
@@ -24,11 +25,11 @@ module LabelModule
     puts "\nHere is the list of labels"
     list = fetch_label_data
     if list.empty?
-       puts "No record found"
+      puts 'No record found'
     else
-     list.each_with_index do |item, index|
-      puts "#{index + 1}) id: #{item['id']}, Title: #{item['title']}, Color: #{item['color']}"
-     end
+      list.each_with_index do |item, index|
+        puts "#{index + 1}) id: #{item['id']}, Title: #{item['title']}, Color: #{item['color']}"
+      end
     end
   end
 
