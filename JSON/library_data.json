@@ -108,16 +108,25 @@
     "archived": false
   },
   {
-    "genre": "test",
-    "author": {
-      "id": 711,
-      "first_name": "J.J ",
-      "last_name": "Rowling"
+    "publisher": "Abdul Hamid",
+    "label": {
+      "id": 765,
+      "title": "Jhon Smith",
+      "color": "Red"
     },
-    "source": "yy",
-    "label": "tt",
-    "publish_date": "r",
-    "cover_state": "r",
+    "publish_date": "02-03-2022",
+    "cover_state": "bad",
+    "archived": false
+  },
+  {
+    "publisher": "kdkd",
+    "label": {
+      "id": 365,
+      "title": "reddk",
+      "color": "red"
+    },
+    "publish_date": "12-12-2015",
+    "cover_state": "good",
     "archived": false
   }
 ]

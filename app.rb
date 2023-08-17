@@ -57,4 +57,9 @@ class App
   def list_all_books
     LibraryModule.list_all_books
   end
+
+  def list_all_labels
+    label_list_display
+    display_options
+  end
 end

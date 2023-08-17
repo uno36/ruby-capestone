@@ -25,15 +25,15 @@ module AuthorModule
     puts "\nHere is the list of authors"
     list = fetch_author_data
     list.each_with_index do |item, index|
-      puts "#{index + 1}) id: #{item['id']}, First Name: #{item['first_name']}, Last Name: #{item['last_name']}"
+      puts "#{index + 1}) id: #{item['id']}, Author Name: #{item['first_name']} #{item['last_name']}"
     end
   end
 
   def create_author
     puts 'Author First Name: '
-    first_name = gets.chomp
+    first_name = gets.chomp.to_s
     puts 'Author Last Name: '
-    last_name = gets.chomp
+    last_name = gets.chomp.to_s
     author = Author.new(first_name, last_name).to_hash
     existing_author = fetch_author_data
     existing_author << author

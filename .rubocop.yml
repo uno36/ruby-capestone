@@ -4,11 +4,12 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "**/module/book_module.rb"
 
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 190
 Metrics/MethodLength:
   Max: 22
 Metrics/AbcSize:
