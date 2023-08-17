@@ -5,8 +5,6 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "**/module/book_module.rb"
-    - "**/spec/book_spec.rb"
-    - "**/spec/book_spec.rb"
     
   DisplayCopNames: true
 
