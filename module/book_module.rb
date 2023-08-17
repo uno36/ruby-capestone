@@ -33,4 +33,8 @@ module LibraryModule
     save_data(data)
     puts "Book '#{label}' added successfully!"
   end
+
+  def list_all_label
+  end
+
 end
