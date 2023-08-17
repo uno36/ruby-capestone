@@ -21,7 +21,7 @@ module LibraryModule
     puts 'Below is a list of all added books'
     data.each_with_index do |item_data, index|
       # rubocop:disable Layout/LineLength
-      puts "#{index + 1}: Genre: #{item_data['genre']}, Title: #{item_data['label']}, Author: #{item_data['author']}, Date: #{item_data['publish_date']}"
+      puts "#{index + 1}) Genre: #{item_data['genre']}, Title: #{item_data['label']}, Author: #{item_data['author']}, Date: #{item_data['publish_date']}"
       # rubocop:enable Layout/LineLength
     end
   end
@@ -33,8 +33,4 @@ module LibraryModule
     save_data(data)
     puts "Book '#{label}' added successfully!"
   end
-
-  def list_all_label
-  end
-
 end

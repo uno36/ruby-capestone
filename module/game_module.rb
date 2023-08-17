@@ -5,27 +5,21 @@ require_relative 'author_module'
 module GameModule
   include AuthorModule
   def add_game
-    puts "\nInput Game Information"
-    puts 'Game genre: '
-    genre = gets.chomp
-    puts 'Game author: '
+    print "\nThe Game is Multi Player [true/false]: "
+    multiplayer = gets.chomp.to_s
+    puts "\nInput Game Information:"
+    print 'Game author: '
     author_list_display
-    puts 'Select [0] to cleate new Author'
+    print "Enter '0' to cleate new author: "
     input = gets.chomp.to_i
     author = author_choice(input)
-    puts 'Game source: '
-    source = gets.chomp
-    puts 'Game label: '
-    label = gets.chomp
-    puts 'Game publish date [dd/mm/yyy]'
-    publish_date = gets.chomp
-    puts 'Last played date  [dd/mm/yyy]'
+    print 'Last played date  [dd-mm-yyyy]: '
     last_played_at = gets.chomp
-    game = Game.new(genre, author, source, label, publish_date, last_played_at)
+    game = Game.new(author, last_played_at, multiplayer)
     fetch_game_data
     new_game_data = fetch_game_data << game.to_hash
     save_game_data(new_game_data)
-    puts 'Game created......'
+    puts 'Game created and saved......'
   end
 
   def author_choice(selection)
@@ -50,11 +44,15 @@ module GameModule
   end
 
   def game_list_display
-    puts "\nHere is the list of games"
+    puts "\nHere is the list of games: "
     list = fetch_game_data
-    list.each_with_index do |item, index|
-      puts "#{index + 1}) id: #{item['id']}, label: #{item['label']}, author: #{item['author']}, " \
-           "multiplayer: #{item['multiplayer']}, publish_date: #{item['publish_date']}"
+    if list.empty?
+      puts 'No Games found.'
+    else
+      list.each_with_index do |item, index|
+      puts "#{index + 1}) id: #{item['id']}, Author Name: #{item['author']['first_name']} #{item['author']['last_name']}, " \
+           "multiplayer: #{item['multiplayer']}, Last playing date: #{item['last_played_at']}"
+      end
     end
   end
 end

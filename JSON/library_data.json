@@ -106,18 +106,5 @@
     "publish_date": "1989-10-07",
     "cover_state": "good",
     "archived": false
-  },
-  {
-    "genre": "test",
-    "author": {
-      "id": 711,
-      "first_name": "J.J ",
-      "last_name": "Rowling"
-    },
-    "source": "yy",
-    "label": "tt",
-    "publish_date": "r",
-    "cover_state": "r",
-    "archived": false
   }
 ]

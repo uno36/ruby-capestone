@@ -1,7 +1,7 @@
 require 'JSON'
 require_relative '../classes/bookClass/label'
 
-module labelModule
+module LabelModule
   def add_label
     puts "\nHere is the list of labels"
     return if File.exist?('JSON/label.json')
@@ -29,14 +29,23 @@ module labelModule
   end
 
   def create_label
-    puts 'Label tiele: '
+    puts 'Label name: '
     title = gets.chomp
     puts 'Label color: '
     color = gets.chomp
-    label = label.new(title, color).to_hash
+    label = Label.new(title, color).to_hash
     existing_label = fetch_label_data
     existing_label << label
     save_label_data(existing_label)
     puts 'Label has been created successfully!'
+  end
+
+  def label_choice(selection)
+    if selection.zero?
+      create_label
+      fetch_label_data[-1]
+    else
+      fetch_label_data[selection - 1]
+    end
   end
 end

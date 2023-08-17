@@ -11,8 +11,7 @@ module AddBookModule
 
     puts 'Enter the author:'
     author_list_display
-    author.gets.chomp
-    puts 'Select [0] to cleate new Author'
+    puts 'Enter [0] to cleate new Author'
     input = gets.chomp.to_i
     author = author_choice(input)
 
@@ -20,7 +19,10 @@ module AddBookModule
     source = gets.chomp
 
     puts 'Enter the label:'
-    label = gets.chomp
+    label_list_display
+    puts 'Enter [0] to cleate new label'
+    input = gets.chomp.to_i
+    label = label_choice(input)
 
     puts 'Enter the publish date:'
     publish_date = gets.chomp
