@@ -24,9 +24,9 @@ module LibraryModule
     end
   end
 
-  def self.add_book(label, publisher, publish_date, cover_state, archived: false)
+  def self.add_book(label, publisher, publish_date, cover_state)
     data = load_data
-    book = Book.new(label, publisher, publish_date, cover_state, archived: false)
+    book = Book.new(label, publisher, publish_date, cover_state)
     data << book.to_h
     save_data(data)
     puts 'Book added and saved successfully!'
