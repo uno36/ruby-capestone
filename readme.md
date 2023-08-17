@@ -6,13 +6,14 @@
 - [🎯 Catalog of my things](#-catalog-of-my-things)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
+    - [Video presentation](#video-presentation)
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Test](#test)
   - [👥 Authors ](#-authors-)
-    - [Author](#author)
+    - [Authors](#authors)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [👋 Show your support ](#-show-your-support-)
@@ -90,7 +91,7 @@ rspec ./spec
 
 ## 👥 Authors <a name="authors"></a>
 
-### Author
+### Authors
 
 👤 **Alijan Rahimi**
 
@@ -98,9 +99,18 @@ rspec ./spec
 - Twitter: [@AlijanRahimi10](https://twitter.com/AlijanRahimi10)
 - LinkedIn: [Alijan-Rahimi](https://www.linkedin.com/in/alijan-rahimi-18389ab3)
 
-👤 **Emounole**
+👤 **Nahid Raihan Sardar**
 
-👤 **Nahid**
+- GitHub: [Nahid1911](https://github.com/Nahid1911)
+- Medium: [@nahid.raihan](https://medium.com/@nahid.raihan)
+- LinkedIn: [nahidraihan](https://www.linkedin.com/in/nahidraihan/)
+- Twitter: [Nahid1911](https://twitter.com/Nahid1911)
+
+👤 **Emmanuel Tofa**
+
+- GitHub: [@uno36](https://github.com/uno36)
+- Twitter: [@tofauemmanuel](https://twitter.com/tofauemmanuel)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-tofa-673b2516a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -12,5 +12,32 @@ CREATE TABLE Genre(
   FOREIGN KEY(item_id) REFERENCES items(id)
 );
 
+CREATE TABLE Game (
+    id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+    last_played_date DATE NOT NULL,
+    multiplayer BOOLEAN NOT NULL,
+    FOREIGN KEY(item_id) REFERENCES items(id)
+);
+
+CREATE TABLE Author (
+    id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
+);
+
+CREATE TABLE Book(
+  id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+  publish_date DATE,
+  archived BOOLEAN,
+  publisher VARCHAR(150),
+  cover_state VARCHAR(200),
+);
+
+CREATE TABLE Labels(
+  id INTEGER GENERATED ALWAYS AS INDENTITY PRIMARY KEY,
+  title VARCHAR(150),
+  color VARCHAR(100),
+  FOREIGN KEY(item_id) REFERENCES items(id)
+);
 
 
