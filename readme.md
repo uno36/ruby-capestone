@@ -136,13 +136,13 @@ Feel free to check the [issues page](https://github.com/uno36/ruby-capestone/iss
 
 Give a ⭐️ if you like this project!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>.
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🔭Acknowledgments <a name="acknowledgements"></a>
 
-- We would like to thank Microverse. for giving us this wonderful opportunity to work on this project.
+- We would like to thank Microverse. for giving us this wonderful opportunity to work on this ruby-capstonr-project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
