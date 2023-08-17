@@ -90,7 +90,7 @@ rspec ./spec
 
 ## 👥 Authors <a name="authors"></a>
 
-### Author
+### Authors
 
 👤 **Alijan Rahimi**
 
@@ -100,7 +100,12 @@ rspec ./spec
 
 👤 **Emounole**
 
-👤 **Nahid**
+👤 **Nahid Raihan Sardar**
+
+- GitHub: [Nahid1911](https://github.com/Nahid1911)
+- Medium: [@nahid.raihan](https://medium.com/@nahid.raihan)
+- LinkedIn: [nahidraihan](https://www.linkedin.com/in/nahidraihan/)
+- Twitter: [Nahid1911](https://twitter.com/Nahid1911)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
