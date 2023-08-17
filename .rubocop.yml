@@ -4,6 +4,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "**/module/book_module.rb"
 
   DisplayCopNames: true
 
