@@ -142,7 +142,7 @@ Give a ⭐️ if you like this project!
 
 ## 🔭Acknowledgments <a name="acknowledgements"></a>
 
-- We would like to thank Microverse. for giving us this wonderful opportunity to work on this project.
+- We would like to thank Microverse. for giving us this wonderful opportunity to work on this ruby-capstonr-project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
