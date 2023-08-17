@@ -1,5 +1,5 @@
 require_relative '../classes/bookClass/book'
-require 'JSON'
+require 'json'
 
 module LibraryModule
   FILENAME = 'JSON/library_data.json'.freeze

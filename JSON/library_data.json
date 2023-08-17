@@ -117,5 +117,16 @@
     "publish_date": "02-03-2022",
     "cover_state": "bad",
     "archived": false
+  },
+  {
+    "publisher": "kdkd",
+    "label": {
+      "id": 365,
+      "title": "reddk",
+      "color": "red"
+    },
+    "publish_date": "12-12-2015",
+    "cover_state": "good",
+    "archived": false
   }
 ]
