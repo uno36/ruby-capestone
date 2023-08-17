@@ -1,7 +1,7 @@
 require_relative '../module/author_module'
 
 RSpec.describe AuthorModule do
-  include AuthorModule 
+  include AuthorModule
   describe '#add_author' do
     context 'when JSON file does not exist' do
       before do
@@ -112,7 +112,7 @@ RSpec.describe AuthorModule do
   end
 
   describe '#create_author' do
-    let(:dummy_author_data) { [{"first_name" => "John", "id" => 1, "last_name" => "Doe"}] }
+    let(:dummy_author_data) { [{ 'first_name' => 'John', 'id' => 1, 'last_name' => 'Doe' }] }
 
     before do
       allow(self).to receive(:fetch_author_data).and_return(dummy_author_data)
@@ -125,10 +125,10 @@ RSpec.describe AuthorModule do
       expect(self).to receive(:puts).with('Author Last Name: ')
       expect(self).to receive(:gets).and_return("Doe\n")
 
-      expect(Author).to receive(:new).with("John", "Doe").and_return(double(to_hash: {"first_name" => "John", "id" => 2, "last_name" => "Doe"}))
+      expect(Author).to receive(:new).with('John', 'Doe').and_return(double(to_hash: { 'first_name' => 'John', 'id' => 2, 'last_name' => 'Doe' }))
 
       expect(self).to receive(:fetch_author_data).and_return(dummy_author_data)
-      expect(self).to receive(:save_author_data).with(dummy_author_data + [{"first_name" => "John", "id" => 2, "last_name" => "Doe"}])
+      expect(self).to receive(:save_author_data).with(dummy_author_data + [{ 'first_name' => 'John', 'id' => 2, 'last_name' => 'Doe' }])
 
       expect(self).to receive(:puts).with('Author has been created successfully!')
 
