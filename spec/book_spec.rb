@@ -2,9 +2,9 @@ require_relative '../classes/bookClass/book'
 require_relative '../module/library_module'
 require 'json'
 
-describe LibraryModule do  
+describe LibraryModule do
   before(:each) do
-    File.delete(LibraryModule::FILENAME) if File.exist?(LibraryModule::FILENAME)
+    FileUtils.rm_f(LibraryModule::FILENAME)
   end
 
   describe '.load_data' do
@@ -29,5 +29,5 @@ describe LibraryModule do
       expect(File.exist?(LibraryModule::FILENAME)).to be true
       expect(File.read(LibraryModule::FILENAME)).to eq(JSON.pretty_generate(data))
     end
-  end  
+  end
 end

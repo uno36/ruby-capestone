@@ -34,5 +34,5 @@ describe LabelModule do
       expect(File).to have_received(:open).with('JSON/label.json', 'w')
       expect(JSON).to have_received(:dump).with(data, instance_of(StringIO))
     end
-  end  
+  end
 end
