@@ -136,7 +136,7 @@ Feel free to check the [issues page](https://github.com/uno36/ruby-capestone/iss
 
 Give a ⭐️ if you like this project!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>.
 
 <!-- ACKNOWLEDGEMENTS -->
 
