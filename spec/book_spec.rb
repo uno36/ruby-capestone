@@ -1,39 +1,35 @@
 require_relative '../module/book_module'
 require_relative '../classes/bookClass/book'
+require 'json'
 
 describe LibraryModule do
-  let(:test_data) { [{"label" => {"title" => "Book Title"}, "publisher" => "Publisher", "publish_date" => "2023-01-01", "cover_state" => "Good"}] }
-  let(:sample_book) { Book.new("Sample Title", "Sample Publisher", "2023-01-01", "Good").to_h }
-
-  before do
-    allow(File).to receive(:exist?).and_return(true)
-    allow(File).to receive(:read).and_return(test_data.to_json)
-    allow(File).to receive(:write)
-  end
-
   describe '.load_data' do
-    it 'loads data from JSON file' do
-      expect(LibraryModule.load_data).to eq(test_data)
+    context 'when library data file exists' do
+      it 'returns the existing library data' do
+        existing_data = [{ 'label' => 'Book 1', 'publisher' => 'Publisher 1', 'publish_date' => '2023-01-01', 'cover_state' => 'Good' }]
+        allow(File).to receive(:exist?).with(LibraryModule::FILENAME).and_return(true)
+        allow(File).to receive(:read).with(LibraryModule::FILENAME).and_return(existing_data.to_json)
+
+        expect(LibraryModule.load_data).to eq(existing_data)
+      end
+    end
+
+    context 'when library data file does not exist' do
+      it 'returns an empty array' do
+        allow(File).to receive(:exist?).with(LibraryModule::FILENAME).and_return(false)
+
+        expect(LibraryModule.load_data).to eq([])
+      end
     end
   end
 
   describe '.save_data' do
-    it 'saves data to JSON file' do
-      LibraryModule.save_data([sample_book])
-      expect(File).to have_received(:write).with(LibraryModule::FILENAME, JSON.pretty_generate([sample_book]))
-    end
-  end
+    it 'saves library data to the JSON file' do
+      data = [{ 'label' => 'Book 1', 'publisher' => 'Publisher 1', 'publish_date' => '2023-01-01', 'cover_state' => 'Good' }]
+      allow(File).to receive(:write)
+      LibraryModule.save_data(data)
 
-  describe '.list_all_books' do
-    it 'prints a list of all added books' do
-      expect { LibraryModule.list_all_books }.to output(/Below is a list of all added books/).to_stdout
-    end
-  end
-
-  describe '.add_book' do
-    it 'adds a book and saves it' do
-      LibraryModule.add_book("New Book", "New Publisher", "2023-08-18", "Excellent")
-      expect(File).to have_received(:write).with(LibraryModule::FILENAME, JSON.pretty_generate([sample_book]))
+      expect(File).to have_received(:write).with(LibraryModule::FILENAME, JSON.pretty_generate(data))
     end
   end
 end

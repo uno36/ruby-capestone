@@ -1,7 +1,14 @@
 require_relative '../module/label_module'
+require_relative '../classes/bookClass/label'
 require 'json'
 
+class TestLabelModule
+  extend LabelModule
+end
+
 describe LabelModule do
+  let(:test_label_module) { TestLabelModule }
+
   describe '.fetch_label_data' do
     context 'when label data file exists' do
       it 'returns the existing label data' do
@@ -9,7 +16,7 @@ describe LabelModule do
         allow(File).to receive(:exist?).with('JSON/label.json').and_return(true)
         allow(File).to receive(:read).with('JSON/label.json').and_return(existing_data.to_json)
 
-        expect(LabelModule.fetch_label_data).to eq(existing_data)
+        expect(test_label_module.fetch_label_data).to eq(existing_data)
       end
     end
 
@@ -17,7 +24,7 @@ describe LabelModule do
       it 'returns an empty array' do
         allow(File).to receive(:exist?).with('JSON/label.json').and_return(false)
 
-        expect(LabelModule.fetch_label_data).to eq([])
+        expect(test_label_module.fetch_label_data).to eq([])
       end
     end
   end
@@ -28,7 +35,7 @@ describe LabelModule do
       allow(File).to receive(:open).with('JSON/label.json', 'w').and_yield(StringIO.new)
       allow(JSON).to receive(:dump)
 
-      LabelModule.save_label_data(data)
+      test_label_module.save_label_data(data)
 
       expect(File).to have_received(:open).with('JSON/label.json', 'w')
       expect(JSON).to have_received(:dump).with(data, instance_of(StringIO))

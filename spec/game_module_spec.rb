@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 require_relative '../module/game_module'
 
 RSpec.describe GameModule do
