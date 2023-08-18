@@ -45,9 +45,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add music album**
-- **Add books**
-- **Add games**
+- **Add Music Albums: Easily add and catalog your music albums. Include details such as album name, artist, release date, and whether it's available on Spotify. The app also lets you associate genres and labels to keep your music collection well-organized.**
+- **Add Books: Keep track of your reading journey by adding books to your catalog. Input important information like the book's title, author, publish date, and publisher. Mark books as archived once you've finished reading them.**
+- **Add Games: For the gamers out there, the app allows you to add your favorite games to your collection. Record details like the game's title, last played date, and whether it supports multiplayer gameplay.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
