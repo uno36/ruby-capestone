@@ -1,4 +1,3 @@
-require_relative '../classes/bookClass/label'
 require_relative '../module/label_module'
 require 'json'
 
