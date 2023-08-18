@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 require_relative '../classes/gameClass/game'
 require_relative 'author_module'
 

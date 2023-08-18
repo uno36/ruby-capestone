@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 require_relative '../classes/bookClass/label'
 
 module LabelModule

@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 require_relative '../classes/authorClass/author'
 
 module AuthorModule
